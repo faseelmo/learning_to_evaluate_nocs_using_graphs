@@ -7,4 +7,5 @@ __pycache__/
 *.txt
 *.csv
 venv/
+training/results/
 data/training_data/

@@ -130,12 +130,6 @@ if __name__ == "__main__":
     does_path_exist( unmapped_graph_dir )
     does_path_exist( training_data_dir  )
 
-
-    create_test_graphs( count=test_data_count,
-                        node_range=node_range,
-                        save_dir=test_data_dir,
-                        params=params )
-
     create_original_graph( count=graph_count, 
                            node_range=node_range, 
                            save_dir=unmapped_graph_dir, 
@@ -145,5 +139,10 @@ if __name__ == "__main__":
                        save_dir=training_data_dir,
                        params=params,
                        batch_size=batch_size )
+
+    create_test_graphs( count=test_data_count,
+                        node_range=node_range,
+                        save_dir=test_data_dir,
+                        params=params )
 
 

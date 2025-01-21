@@ -1,6 +1,7 @@
 import os 
 import yaml
 import torch
+import time 
 import random   
 import argparse
 import numpy as np
@@ -117,6 +118,8 @@ def main():
     loss_fn     = torch.nn.L1Loss().to(DEVICE)
     optimizer   = torch.optim.Adam( model.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY )
 
+    start_time = time.time()
+    
     train_and_validate( epochs         = EPOCHS, 
                         train_loader   = train_loader, 
                         valid_loader   = valid_loader, 
@@ -127,6 +130,10 @@ def main():
                         device         = DEVICE, 
                         save_path      = SAVE_PATH, 
                         save_threshold = SAVE_THRESHOLD )
+                        
+    end_time = time.time()
+
+    print(f"Training took {end_time - start_time} seconds")
 
 
 if __name__ == "__main__":

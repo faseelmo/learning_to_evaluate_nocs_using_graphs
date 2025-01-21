@@ -24,9 +24,6 @@ def get_best_application_score(weight_path):
 
     kendalls_tau = loss["kendalls_tau"]
 
-    # for i, tau in enumerate(kendalls_tau): 
-    #     print(f"Epoch: {i+1}\tTau: {tau}")
-
     best_epoch = np.argmax(kendalls_tau)
     best_score = kendalls_tau[best_epoch]
 

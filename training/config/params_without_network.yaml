@@ -1,0 +1,35 @@
+# Model Parameters
+NUM_MPN_LAYERS: 5 # Number of conv layers in MPN
+HIDDEN_CHANNELS: 64 # Number of output node embeddings
+IS_HETERO: "True"
+HAS_SCHEDULER: "True"
+HAS_DEPENDENCY: "True"
+HAS_TASK_DEPEND: "True" # If set to True, make sure HAS_DEPENDENCY is also True
+DEVICE: "cpu" # 'cuda' or 'cpu'
+LOSS_FN: "mae" # 'mse' or 'mae' or 'huber'
+CONV_TYPE: "graphconv" # 'graphconv' or 'gcn' or 'gin' or 'sage' or 'gat'
+AGGR: "add" # 'add' or 'mean' or 'max'
+# Normalization Constants
+# Generate and processing time should be the same during data generation
+# and model training
+MAX_GENERATE: 10
+MAX_PROCESSING_TIME: 10
+MAX_CYCLE: 100
+# Hyperparameters
+LEARNING_RATE: 0.01
+EPOCHS: 200
+WEIGHT_DECAY: 0
+BATCH_SIZE: 128
+# Load pre-trained model
+LOAD_MODEL: False
+MODEL_PATH: ""
+# Data Path
+DATA_DIR: "data/training_data/without_network"
+# Results directory
+RESULTS_DIR: "training/results/without_network"
+SAVE_THRESHOLD: 0.8
+HAS_EXIT: "True"
+
+TRAIN_PATH: "training/train_without_network.py"
+MODEL_PATH: "training/model_without_network.py"
+

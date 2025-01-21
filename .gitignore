@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+.vscode/
+*.json
+*.pth 
+*.pkl
+*.txt
+*.csv
+venv/
+data/training_data/

@@ -1,0 +1,30 @@
+# Model Parameters
+NUM_MPN_LAYERS: 5 # Number of conv layers in MPN
+HIDDEN_CHANNELS: 64 # Number of output node embeddings 
+DEVICE: 'cpu' # 'cuda' or 'cpu'
+EMBEDDING_DIM: 128 # Dimension of node embeddings
+HETERO_AGGR:
+  - sum
+# Normalization Constants
+# Generate and processing time should be the same during data generation and model training 
+MIN_GENERATE: 1
+MAX_GENERATE: 5
+MIN_PROCESSING_TIME: 5
+MAX_PROCESSING_TIME: 10
+MAX_CYCLE: 1000
+# Hyperparameters 
+LEARNING_RATE: 0.01
+EPOCHS: 100
+WEIGHT_DECAY: 0
+BATCH_SIZE: 128
+# Load pre-trained model
+LOAD_MODEL: False
+MODEL_PATH: training/results/gpu/1_GATv2/iter_2/LatNet_83_131.pth
+#NOC 
+MESH_SIZE: 4
+# Data Path
+DATA_DIR: 'data/training_data/with_network'
+TRAIN_DIR: 'data/training_data/with_network/train_1'
+# Results directory 
+RESULTS_DIR: 'training/results/with_network/1_embedding_m3_c'
+SAVE_THRESHOLD: 0.8

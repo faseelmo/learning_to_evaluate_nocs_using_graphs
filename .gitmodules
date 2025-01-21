@@ -1,0 +1,3 @@
+[submodule "noc_pysim"]
+	path = noc_pysim
+	url = https://github.com/faseelmo/noc_pysim.git

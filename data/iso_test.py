@@ -54,7 +54,8 @@ if __name__ == "__main__":
         best_epoch = result["best_epoch"]
     else: 
         print(f"Result is None")
-        best_epoch = 61
+        # best_epoch = 61
+        raise ValueError("Result is None")
 
 
     print(f"Best Epoch: {best_epoch}")

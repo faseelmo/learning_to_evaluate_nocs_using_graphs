@@ -36,11 +36,12 @@ The results will be stored in the directory training/results/with_network/from_z
 ```bash 
 python3 -m training.map_metric --model_path training/results/with_network/from_zip --find
 ```
-The results of the evaluation can be found in training/results/with_network/from_zip/results.yaml and training/results/with_network/from_zip/plots. 
+The results of the evaluation can be found in `training/results/with_network/from_zip/results.yaml` and `training/results/with_network/from_zip/plots`. 
 
 ### 5. Isomorphic Test 
 ```bash 
 python3 -m data.iso_test 
 ```
+By default, this will use the best model from `training/results/with_network/from_zip`. 
 
 

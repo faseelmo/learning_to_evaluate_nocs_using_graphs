@@ -3,8 +3,8 @@ import torch
 import copy
 import networkx as nx 
 
-from src.utils import get_mesh_network
-from src.simulator import Simulator, GraphMap
+from noc_pysim.src.utils import get_mesh_network
+from noc_pysim.src.simulator import Simulator, GraphMap
 
 from training.train import ( get_max_latency_hetero ) 
 from training.utils import hetero_graph_to_tensor, get_mask_dict_from_data
@@ -46,9 +46,9 @@ def inference_unique_mapping(  mapping_list,  **kwargs ):
 
 if __name__ == "__main__": 
 
-    model_path = "training/results/with_network/0_base"
+    model_path = "training/results/with_network/from_zip"
     model, dataset, params, result = import_model_dataset_param( model_path )
-    has_mask = False
+    has_mask = True
     
     if result is not None:
         best_epoch = result["best_epoch"]

@@ -19,6 +19,17 @@ You can use the training data I used for training by,
 ```bash 
 git lfs pull  
 ```
+Unzip the training data and ensure that the folder structure is as follows:
+```
+.
+├── data
+    ├── training_data
+        ├── with_network
+            ├── map_test
+            ├── test
+            ├── train
+```
+
 
 Or if you also want to create your own training data, just run the following python scripts, 
 ```bash 
